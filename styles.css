@@ -1,0 +1,68 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #424242;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #6200ea;
+  color: #fff;
+}
+
+.navbar .menu a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #6200ea;
+  color: #fff;
+}
+
+.cta-button {
+  background-color: #03dac5;
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  flex: 1 1 calc(33% - 40px);
+  max-width: calc(33% - 40px);
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #6200ea;
+  color: #fff;
+}
