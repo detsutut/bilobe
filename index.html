@@ -3,22 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bilobe - Innovative Startup</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Bilobe - Innovating for a better tomorrow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
-        :root {
-            --primary-color: #6200EE;
-            --secondary-color: #03DAC6;
-            --text-color: #333333;
-            --card-color: #FFFFFF;
-        }
         body, html {
             margin: 0;
             padding: 0;
             font-family: 'Roboto', sans-serif;
             color: var(--text-color);
             scroll-behavior: smooth;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .section {
+            padding: 80px 0;
+        }
+        #hero {
+            background-color: #f0f4f8;
+            text-align: center;
+            padding: 120px 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .word-container {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s, transform 0.5s;
+            margin-right: 0.5rem;
+        }
+        .word-container.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s 1.5s, transform 0.5s 1.5s;
+        }
+        #hero-btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 100px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: background-color 0.3s, transform 0.3s, opacity 0.5s 2s;
+        }
+        #hero-btn:hover {
+            background-color: #7C4DFF;
+            transform: scale(1.05);
+        }
+        .material-symbols-outlined {
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        :root {
+            --primary-color: #6200EE;
+            --secondary-color: #03DAC6;
+            --text-color: #333333;
+            --card-color: #FFFFFF;
         }
         .navbar {
             position: fixed;
@@ -68,7 +131,7 @@
         }
         h1 {
             font-size: 3.5rem;
-            font-weight: 300;
+            font-weight: 600;
             margin-bottom: 1rem;
         }
         h2 {
@@ -87,16 +150,18 @@
             color: white;
             padding: 0.8rem 2rem;
             border: none;
-            border-radius: 4px;
+            border-radius: 100px;
             font-size: 1rem;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .btn:hover {
             background-color: #7C4DFF;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         .btn .material-symbols-outlined {
             margin-right: 0.5rem;
@@ -108,16 +173,17 @@
         }
         .feature-card {
             background-color: var(--card-color);
-            border-radius: 8px;
+            border-radius: 16px;
             padding: 2rem;
             margin: 1rem;
             width: calc(33.333% - 2rem);
             box-sizing: border-box;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .feature-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
         .feature-icon {
             font-size: 3rem;
@@ -125,26 +191,26 @@
             margin-bottom: 1rem;
         }
         .partners-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
             gap: 2rem;
-            justify-items: center;
-            align-items: center;
         }
         .partner-logo {
-            max-width: 150px;
+            width: 150px;
             height: 100px;
             background-color: #fff;
-            border-radius: 8px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 1rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .partner-logo:hover {
             transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         .partner-logo img {
             max-width: 100%;
@@ -171,7 +237,7 @@
             margin-bottom: 1rem;
             padding: 0.8rem;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 8px;
             font-size: 1rem;
         }
         @media (max-width: 768px) {
@@ -199,11 +265,14 @@
 
     <section id="hero" class="section">
         <div class="container">
-            <h1 class="hidden">Welcome to Bilobe</h1>
-            <p class="hidden">Innovating for a better tomorrow</p>
-            <a href="#features" class="btn hidden">
-                <span class="material-symbols-outlined">rocket_launch</span>
-                Explore Features
+            <h1 id="hero-title">
+                <span class="word-container">Welcome<sup> </sup></span>
+                <span class="word-container">to<sup> </sup></span>
+                <span class="word-container"><bold>Bilobe</bold><sup><small>AI</small></sup></span>
+            </h1>
+            <p id="hero-subtitle">Innovating for a better tomorrow</p>
+            <a href="#features" class="btn" id="hero-btn">
+                <span class="material-symbols-outlined">rocket_launch</span> Explore Features
             </a>
         </div>
     </section>
@@ -213,7 +282,7 @@
             <h2 class="hidden">Our Features</h2>
             <div class="features">
                 <div class="feature-card hidden">
-                    <span class="material-symbols-outlined feature-icon">light_bulb</span>
+                    <span class="material-symbols-outlined feature-icon">light</span>
                     <h3>Innovative</h3>
                     <p>Cutting-edge solutions for modern problems</p>
                 </div>
@@ -257,9 +326,6 @@
                 <div class="partner-logo">
                     <img src="/api/placeholder/150/100" alt="Partner 5">
                 </div>
-                <div class="partner-logo">
-                    <img src="/api/placeholder/150/100" alt="Partner 6">
-                </div>
             </div>
         </div>
     </section>
@@ -281,6 +347,24 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const wordContainers = document.querySelectorAll('.word-container');
+            const heroSubtitle = document.getElementById('hero-subtitle');
+            const exploreBtn = document.getElementById('hero-btn');
+
+            function animateWords(index = 0) {
+                if (index < wordContainers.length) {
+                    wordContainers[index].classList.add('active');
+                    setTimeout(() => animateWords(index + 1), 450);
+                } else {
+                    heroSubtitle.style.opacity = '1';
+                    heroSubtitle.style.transform = 'translateY(0)';
+                    exploreBtn.style.opacity = '1';
+                    exploreBtn.style.transform = 'translateY(0)';
+                }
+            }
+
+            setTimeout(animateWords, 500);
+
             const hiddenElements = document.querySelectorAll('.hidden');
 
             const observer = new IntersectionObserver((entries) => {
