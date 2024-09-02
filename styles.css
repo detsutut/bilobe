@@ -1,9 +1,18 @@
+:root {
+  --primary-color: #6200ea;
+  --secondary-color: #03dac5;
+  --background-color: #f5f5f5;
+  --text-color: #424242;
+  --elevation-shadow-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --elevation-shadow-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
-  color: #424242;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .navbar {
@@ -11,31 +20,42 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #6200ea;
+  background-color: var(--primary-color);
   color: #fff;
 }
 
-.navbar .menu a {
+.navbar .nav-link {
   color: #fff;
   margin-left: 20px;
   text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+  color: var(--secondary-color);
 }
 
 .hero {
   text-align: center;
   padding: 100px 20px;
-  background-color: #6200ea;
+  background-color: var(--primary-color);
   color: #fff;
 }
 
 .cta-button {
-  background-color: #03dac5;
+  background-color: var(--secondary-color);
   color: #000;
   padding: 10px 20px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 8px;
   margin-top: 20px;
   display: inline-block;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+  box-shadow: var(--elevation-shadow-2);
+  transform: translateY(-2px);
 }
 
 .section {
@@ -51,18 +71,32 @@ body {
 
 .service-card {
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
   padding: 20px;
   margin: 20px;
   flex: 1 1 calc(33% - 40px);
   max-width: calc(33% - 40px);
   text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.service-card:hover {
+  box-shadow: var(--elevation-shadow-2);
+  transform: translateY(-2px);
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #6200ea;
+  background-color: var(--primary-color);
   color: #fff;
+}
+
+/* Elevation */
+.elevation-1 {
+  box-shadow: var(--elevation-shadow-1);
+}
+
+.elevation-2 {
+  box-shadow: var(--elevation-shadow-2);
 }
