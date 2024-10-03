@@ -22,6 +22,10 @@ body, html {
             display: flex;
             align-items: center;
             justify-content: center;
+            background-image: url('images/rami.png');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
         }
         #hero h1 {
             font-size: 4rem;
