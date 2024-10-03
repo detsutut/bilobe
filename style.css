@@ -181,7 +181,7 @@ body, html {
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .btn:hover {
-            background-color: #7C4DFF;
+            background-color: var(--bilobe-color-light);
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         .btn .material-symbols-outlined {
@@ -273,7 +273,7 @@ body, html {
         }
         
         .footer {
-            background-color: #6200EE;
+            background-color: var(--bilobe-color);
             color: white;
             padding: 2rem 0;
             text-align: center;
