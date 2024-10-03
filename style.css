@@ -74,6 +74,24 @@ body, html {
             background-position: center;
             background-blend-mode: overlay;
         }
+        #features {
+            background-image: url('images/minimal.png');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
+        #partners {
+            background-image: url('images/minimal.png');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
+        #contact {
+            background-image: url('images/minimal.png');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
         .material-symbols-outlined {
             vertical-align: middle;
             margin-right: 5px;
