@@ -259,3 +259,13 @@ body, html {
             margin: 0;
             font-size: 1rem;
         }
+
+        .logo {
+            display: inline-block;
+            padding-right: 20px;
+        }
+            
+        .logo-img {
+            height: 50px; /* Adjust the height according to your preference */
+            width: auto;
+        }
