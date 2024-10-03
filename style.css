@@ -54,7 +54,7 @@ body, html {
         #hero-btn {
             display: inline-block;
             padding: 0.8rem 2rem;
-            background-color: var(--primary-color);
+            background-color: var(--bilobe-color);
             color: white;
             text-decoration: none;
             border-radius: 100px;
@@ -65,7 +65,7 @@ body, html {
             transition: background-color 0.3s, transform 0.3s, opacity 0.5s 2s;
         }
         #hero-btn:hover {
-            background-color: #7C4DFF;
+            background-color: var(--bilobe-color-light);
             transform: scale(1.05);
         }
         #about {
@@ -97,6 +97,8 @@ body, html {
             margin-right: 5px;
         }
         :root {
+            --bilobe-color: #0bb293;
+            --bilobe-color-light: #0dc3a1;
             --primary-color: #6200EE;
             --secondary-color: #03DAC6;
             --text-color: #333333;
