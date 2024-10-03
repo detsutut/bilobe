@@ -68,6 +68,12 @@ body, html {
             background-color: #7C4DFF;
             transform: scale(1.05);
         }
+        #about {
+            background-image: url('images/tech.png');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
         .material-symbols-outlined {
             vertical-align: middle;
             margin-right: 5px;
