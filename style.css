@@ -130,7 +130,7 @@ body, html {
             transition: color 0.3s ease;
         }
         .navbar a:hover {
-            color: var(--primary-color);
+            color: var(--bilobe-color);
         }
         .section {
             min-height: 100vh;
@@ -167,7 +167,7 @@ body, html {
             margin: 0 auto 2rem;
         }
         .btn {
-            background-color: var(--primary-color);
+            background-color: var(--bilobe-color);
             color: white;
             padding: 0.8rem 2rem;
             border: none;
@@ -208,7 +208,7 @@ body, html {
         }
         .feature-icon {
             font-size: 3rem;
-            color: var(--primary-color);
+            color: var(--bilobe-color);
             margin-bottom: 1rem;
         }
         .partners-grid {
