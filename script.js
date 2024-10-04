@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const exploreBtn = document.getElementById('hero-btn');
 
     function animateWords(index = 0) {
-        if (index < wordContainers.length) {
+        if (index < (wordContainers.length-1)) {
             wordContainers[index].classList.add('active');
             if (index >= (wordContainers.length -2)) {
                 setTimeout(() => animateWords(index + 1), 50);
