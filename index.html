@@ -150,6 +150,9 @@
     let ticking = false; // Prevent multiple scroll events from firing
     // Check if the screen is desktop (min-width: 768px)
     let isDesktop = window.innerWidth >= 768;
+
+    let viewportWidth = window.innerWidth;
+    let viewportHeight = window.innerHeight;
         
     window.addEventListener('scroll', function() {
         if (!ticking) {
@@ -165,7 +168,7 @@
                         }
                         else {
                             section.style.backgroundPosition = 'right ' + yPos + 'px';
-                            section.style.backgroundSize = 'auto 100%';
+                            section.style.backgroundSize = `${viewportWidth * 1.1}px ${viewportHeight * 1.1}px`;
                         }
                     }
                 });
@@ -176,6 +179,7 @@
             ticking = true;
         }
     });
+
     </script>
 
 </body>
