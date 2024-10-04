@@ -13,7 +13,7 @@ body, html {
                         background-attachment: fixed; /* Creates the parallax effect */
                         background-position: 50% 0;
                         background-blend-mode: overlay;
-                        transition: background-position 0.2s ease-out;
+                        transition: background-position 0.3s ease-out;
             }
             #hero, features, #about, #partners, #contact {
                         height: 100vh; /* Adjust height to fit your layout */
@@ -297,7 +297,7 @@ max-width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-padding: 4rem 2rem;
+padding: 3rem 2rem;
 box-sizing: border-box;
 }
 
