@@ -28,16 +28,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.1 });
 
     hiddenElements.forEach(el => observer.observe(el));
+});
 
-    window.addEventListener('scroll', function() {
-        // Calculate the scroll position
-        let scrolled = window.pageYOffset;
+window.addEventListener('scroll', function() {
+    // Get the amount of scrolling
+    let scrolled = window.pageYOffset;
 
-        // Apply slight movement to each section's background
-        document.querySelectorAll('.section').forEach(function(section) {
-            let movementSpeed = section.getAttribute('data-speed'); // Customize speed
-            let yPos = -(scrolled * movementSpeed); // Calculate new position
+    // Loop over all sections to adjust background positions
+    document.querySelectorAll('.section').forEach(function(section) {
+        let speed = section.getAttribute('data-speed'); // Customize speed per section
+        if (speed) {
+            let yPos = -(scrolled * speed); // Calculate new background position
             section.style.backgroundPosition = '50% ' + yPos + 'px'; // Move background vertically
-        });
+        }
     });
 });
