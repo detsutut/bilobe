@@ -316,11 +316,3 @@ height: 80px; /* Adjust the height according to your preference */
 width: auto;
 vertical-align: middle;
 }
-
-/* Parallax effect for sections */
-.section {
-background-size: cover;
-background-attachment: fixed; /* Creates the parallax effect */
-background-position: center;
-}   
-
