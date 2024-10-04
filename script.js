@@ -4,9 +4,20 @@ let ticking = false; // Prevent multiple scroll events from firing
 // Check if the screen is desktop (min-width: 768px)
 let isDesktop = window.innerWidth >= 768;
 
+
+// Function to dynamically set background size
+function setDynamicBackgroundSize() {
+    if (!isDesktop) {
+        document.querySelectorAll('.section').forEach(function(section) {
+            section.style.backgroundSize = `auto ${viewportHeight * 1.1}px`;
+        }
+    }
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
     if (!isDesktop) {
-        section.style.backgroundSize = `auto ${viewportHeight * 1.1}px`;
+        setDynamicBackgroundSize() 
     }    
     
     const wordContainers = document.querySelectorAll('.word-container');
@@ -42,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.addEventListener('load', function() {
     if (!isDesktop) {
-        section.style.backgroundSize = `auto ${viewportHeight * 1.1}px`;
+        setDynamicBackgroundSize() 
     }    
 });
 
