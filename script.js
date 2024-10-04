@@ -30,16 +30,41 @@ document.addEventListener('DOMContentLoaded', function() {
     hiddenElements.forEach(el => observer.observe(el));
 });
 
-window.addEventListener('scroll', function() {
-    // Get the amount of scrolling
-    let scrolled = window.pageYOffset;
+let ticking = false; // Prevent multiple scroll events from firing
+// Check if the screen is desktop (min-width: 768px)
+let isDesktop = window.innerWidth >= 768;
 
-    // Loop over all sections to adjust background positions
-    document.querySelectorAll('.section').forEach(function(section) {
-        let speed = section.getAttribute('data-speed'); // Customize speed per section
-        if (speed) {
-            let yPos = -(scrolled * speed); // Calculate new background position
-            section.style.backgroundPosition = '50% ' + yPos + 'px'; // Move background vertically
-        }
-    });
+let viewportWidth = window.innerWidth;
+let viewportHeight = window.innerHeight;
+
+window.addEventListener('load', function() {
+    if (!isDesktop) {
+        section.style.backgroundSize = `auto ${viewportHeight * 1.1}px`;
+    }    
+});
+
+window.addEventListener('scroll', function() {
+    if (!ticking) {
+        window.requestAnimationFrame(function() {
+            let scrolled = window.pageYOffset;
+
+            document.querySelectorAll('.section').forEach(function(section) {
+                let speed = section.getAttribute('data-speed');
+                if (speed) {
+                    let yPos = -(scrolled * speed);
+                    if (isDesktop) {
+                        section.style.backgroundPosition = '50% ' + yPos + 'px';
+                    }
+                    else {
+                        section.style.backgroundPosition = 'right ' + yPos + 'px';
+                        section.style.backgroundSize = `auto ${viewportHeight * 1.1}px`;
+                    }
+                }
+            });
+
+            ticking = false; // Reset the ticking flag
+        });
+
+        ticking = true;
+    }
 });
