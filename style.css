@@ -23,7 +23,7 @@ body, html {
 /* Disable parallax for mobile by default */
 @media (max-width: 767px) {
             .section {
-                        background-attachment: scroll; /* Normal scroll background for mobile */
+                        background-attachment: fixed; /* set scroll for normal scroll background for mobile */
                         background-position: right center;
                         background-blend-mode: overlay;
                         background-size: auto 100%
