@@ -1,4 +1,14 @@
+let viewportWidth = window.innerWidth;
+let viewportHeight = window.innerHeight;
+let ticking = false; // Prevent multiple scroll events from firing
+// Check if the screen is desktop (min-width: 768px)
+let isDesktop = window.innerWidth >= 768;
+
 document.addEventListener('DOMContentLoaded', function() {
+    if (!isDesktop) {
+        section.style.backgroundSize = `auto ${viewportHeight * 1.1}px`;
+    }    
+    
     const wordContainers = document.querySelectorAll('.word-container');
     const heroSubtitle = document.getElementById('hero-subtitle');
     const exploreBtn = document.getElementById('hero-btn');
@@ -29,13 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     hiddenElements.forEach(el => observer.observe(el));
 });
-
-let ticking = false; // Prevent multiple scroll events from firing
-// Check if the screen is desktop (min-width: 768px)
-let isDesktop = window.innerWidth >= 768;
-
-let viewportWidth = window.innerWidth;
-let viewportHeight = window.innerHeight;
 
 window.addEventListener('load', function() {
     if (!isDesktop) {
