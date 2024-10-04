@@ -12,7 +12,7 @@ body, html {
                         background-attachment: fixed; /* Creates the parallax effect */
                         background-position: 50% 0;
                         background-blend-mode: overlay;
-                        transition: background-position 0.3s ease-out;
+                        transition: background-position 0.2s ease-out;
             }
             #hero, features, #about, #partners, #contact {
                         height: 100vh; /* Adjust height to fit your layout */
@@ -23,8 +23,9 @@ body, html {
 @media (max-width: 767px) {
             .section {
                         background-attachment: scroll; /* Normal scroll background for mobile */
-                        background-position: 50% 0;
+                        background-position: right center;
                         background-blend-mode: overlay;
+                        background-size: auto 100%
             }
 }
 
