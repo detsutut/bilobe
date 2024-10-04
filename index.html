@@ -23,7 +23,7 @@
         </ul>
     </nav>
 
-    <section id="hero" class="section">
+    <section id="hero" class="section" data-speed="0.1">
         <div class="container">
             <h1 id="hero-title">
                 <span class="word-container"><img src="images/logo.gif" alt="Bilobe Logo" class="logo-img"></span>
@@ -32,44 +32,46 @@
                 <span class="word-container"><bold>Bilobe</bold></span>
                 <span class="word-container"><sup style="color:#0db293; font-size:xx-large">AI</sup></span>
             </h1>
-            <p id="hero-subtitle">Innovating for a better tomorrow</p>
+            <p id="hero-subtitle">Transforming healthcare with intelligent AI solutions</p>
             <a href="#features" class="btn" id="hero-btn">
                 <span class="material-symbols-outlined">rocket_launch</span> Explore Features
             </a>
         </div>
     </section>
 
-    <section id="features" class="section">
+    <section id="features" class="section" data-speed="0.05">
         <div class="container">
             <h2 class="hidden">Our Features</h2>
             <div class="features">
                 <div class="feature-card hidden">
-                    <span class="material-symbols-outlined feature-icon">light</span>
-                    <h3>Innovative</h3>
-                    <p>Cutting-edge solutions for modern problems</p>
+                    <span class="material-symbols-outlined feature-icon">diagnosis</span>
+                    <h3>Unstructured Data Handling</h3>
+                    <p>Transforming unstructured data into valuable insights to enhance decision-making and patient care</p>
                 </div>
                 <div class="feature-card hidden">
-                    <span class="material-symbols-outlined feature-icon">eco</span>
-                    <h3>Sustainable</h3>
-                    <p>Eco-friendly approaches to technology</p>
+                    <span class="material-symbols-outlined feature-icon">health_and_safety</span>
+                    <h3>Compliance and Security</h3>
+                    <p>Our solutions are designed with robust security measures and compliance with healthcare regulations, ensuring the protection of sensitive patient data</p>
                 </div>
                 <div class="feature-card hidden">
-                    <span class="material-symbols-outlined feature-icon">person</span>
-                    <h3>User-Centric</h3>
-                    <p>Designed with the user in mind</p>
+                    <span class="material-symbols-outlined feature-icon">error_med</span>
+                    <h3>Evaluation and Explanation Tools</h3>
+                    <p>Ensuring AI meets the specific needs of healthcare providers throuth tailored assessment metrics, feedback loops and extensive reports</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="section">
+    <section id="about" class="section" data-speed="0.07">
         <div class="container">
             <h2 class="hidden">About Us</h2>
-            <p class="hidden">Bilobe is a forward-thinking startup dedicated to creating innovative solutions that make a positive impact on the world. Our team of passionate experts works tirelessly to develop cutting-edge technologies that address real-world challenges.</p>
+            <p class="hidden">Born in Pavia, Italy, from the innovative spirit of the Biomedical Informatics Lab "Mario Stefanelli", Bilobe embodies the fusion of cutting-edge academic research and real-world application. Our journey began with a vision: to harness the transformative power of artificial intelligence to solve complex challenges in healthcare.</p>
+            <p class="hidden">Our mission is to streamline processes, enhance patient outcomes, and support healthcare professionals with innovative technology. We excel in harnessing unstructured data to turn complex information into actionable insights through transparent and trustworthy solutions.</p>
+            <p class="hidden">By combining advanced algorithms with our medical expertise, we aim to make healthcare more efficient, accessible, and personalized. Join us on our journey to redefine the future of healthcare.</p>
         </div>
     </section>
 
-    <section id="partners" class="section">
+    <section id="partners" class="section" data-speed="0.1">
         <div class="container">
             <h2 class="hidden">Our Partners</h2>
             <div class="partners-grid hidden">
@@ -92,7 +94,7 @@
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section" data-speed="0.05">
         <div class="container">
             <h2 class="hidden">Contact Us</h2>
             <form class="hidden">
@@ -114,38 +116,8 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const wordContainers = document.querySelectorAll('.word-container');
-            const heroSubtitle = document.getElementById('hero-subtitle');
-            const exploreBtn = document.getElementById('hero-btn');
-
-            function animateWords(index = 0) {
-                if (index < wordContainers.length) {
-                    wordContainers[index].classList.add('active');
-                    setTimeout(() => animateWords(index + 1), 450);
-                } else {
-                    heroSubtitle.style.opacity = '1';
-                    heroSubtitle.style.transform = 'translateY(0)';
-                    exploreBtn.style.opacity = '1';
-                    exploreBtn.style.transform = 'translateY(0)';
-                }
-            }
-
-            setTimeout(animateWords, 500);
-
-            const hiddenElements = document.querySelectorAll('.hidden');
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            hiddenElements.forEach(el => observer.observe(el));
-        });
+    <script src="script.js" defer>
     </script>
+
 </body>
 </html>
