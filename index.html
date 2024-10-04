@@ -147,18 +147,26 @@
         hiddenElements.forEach(el => observer.observe(el));
     });
 
+    let ticking = false; // Prevent multiple scroll events from firing
+
     window.addEventListener('scroll', function() {
-        // Get the amount of scrolling
-        let scrolled = window.pageYOffset;
-    
-        // Loop over all sections to adjust background positions
-        document.querySelectorAll('.section').forEach(function(section) {
-            let speed = section.getAttribute('data-speed'); // Customize speed per section
-            if (speed) {
-                let yPos = -(scrolled * speed); // Calculate new background position
-                section.style.backgroundPosition = '50% ' + yPos + 'px'; // Move background vertically
-            }
-        });
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                let scrolled = window.pageYOffset;
+
+                document.querySelectorAll('.section').forEach(function(section) {
+                    let speed = section.getAttribute('data-speed');
+                    if (speed) {
+                        let yPos = -(scrolled * speed);
+                        section.style.backgroundPosition = '50% ' + yPos + 'px';
+                    }
+                });
+
+                ticking = false; // Reset the ticking flag
+            });
+
+            ticking = true;
+        }
     });
     </script>
 
