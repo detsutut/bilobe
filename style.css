@@ -11,6 +11,7 @@ body, html {
                         background-size: cover;
                         background-attachment: fixed; /* Creates the parallax effect */
                         background-position: center;
+                        background-blend-mode: overlay;
             }
             #hero, features, #about, #partners, #contact {
                         height: 100vh; /* Adjust height to fit your layout */
@@ -22,6 +23,7 @@ body, html {
             .section {
                         background-attachment: scroll; /* Normal scroll background for mobile */
                         background-position: right;
+                        background-blend-mode: overlay;
             }
 }
 
@@ -42,8 +44,6 @@ display: flex;
 align-items: center;
 justify-content: center;
 background-image: url('images/rami.png');
-background-size: cover;
-background-position: center;
 background-blend-mode: overlay;
 }
 #hero h1 {
@@ -89,27 +89,15 @@ transform: scale(1.05);
 }
 #about {
 background-image: url('images/tech_inverted.png');
-background-size: cover;
-background-position: center;
-background-blend-mode: overlay;
 }
 #features {
 background-image: url('images/minimal_invert.png');
-background-size: cover;
-background-position: center;
-background-blend-mode: overlay;
 }
 #partners {
 background-image: url('images/minimal2_inverted.png');
-background-size: cover;
-background-position: center;
-background-blend-mode: overlay;
 }
 #contact {
 background-image: url('images/tech_inverted.png');
-background-size: cover;
-background-position: center;
-background-blend-mode: overlay;
 }
 .material-symbols-outlined {
 vertical-align: middle;
