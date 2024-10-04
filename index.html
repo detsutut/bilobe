@@ -114,38 +114,7 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const wordContainers = document.querySelectorAll('.word-container');
-            const heroSubtitle = document.getElementById('hero-subtitle');
-            const exploreBtn = document.getElementById('hero-btn');
+    <script src = "script.js"/>
 
-            function animateWords(index = 0) {
-                if (index < wordContainers.length) {
-                    wordContainers[index].classList.add('active');
-                    setTimeout(() => animateWords(index + 1), 450);
-                } else {
-                    heroSubtitle.style.opacity = '1';
-                    heroSubtitle.style.transform = 'translateY(0)';
-                    exploreBtn.style.opacity = '1';
-                    exploreBtn.style.transform = 'translateY(0)';
-                }
-            }
-
-            setTimeout(animateWords, 500);
-
-            const hiddenElements = document.querySelectorAll('.hidden');
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            hiddenElements.forEach(el => observer.observe(el));
-        });
-    </script>
 </body>
 </html>
