@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function animateWords(index = 0) {
         if (index < wordContainers.length) {
             wordContainers[index].classList.add('active');
-            if (index == (wordContainers.length -1)) {
+            if (index == (wordContainers.length -2)) {
                 heroSubtitle.style.opacity = '1';
                 heroSubtitle.style.transform = 'translateY(0)';
             }
