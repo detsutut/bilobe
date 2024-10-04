@@ -148,7 +148,9 @@
     });
 
     let ticking = false; // Prevent multiple scroll events from firing
-
+    // Check if the screen is desktop (min-width: 768px)
+    let isDesktop = window.innerWidth >= 768;
+        
     window.addEventListener('scroll', function() {
         if (!ticking) {
             window.requestAnimationFrame(function() {
@@ -158,7 +160,12 @@
                     let speed = section.getAttribute('data-speed');
                     if (speed) {
                         let yPos = -(scrolled * speed);
-                        section.style.backgroundPosition = '50% ' + yPos + 'px';
+                        if (isDesktop) {
+                            section.style.backgroundPosition = '50% ' + yPos + 'px';
+                        }
+                        else {
+                            section.style.backgroundPosition = 'right ' + yPos + 'px';                            
+                        }
                     }
                 });
 
