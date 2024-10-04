@@ -10,7 +10,7 @@ function setDynamicBackgroundSize() {
     if (!isDesktop) {
         document.querySelectorAll('.section').forEach(function(section) {
             section.style.backgroundSize = `auto ${viewportHeight * 1.1}px`;
-        }
+        });
     }
 }
 
