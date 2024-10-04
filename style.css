@@ -31,10 +31,15 @@ body, html {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            z-index: 1;
 }
 .section {
             padding: 80px 0;
 }
+.section::before {
+            z-index: 0;
+}
+
 #hero {
 background-color: #f0f4f8;
 text-align: center;
