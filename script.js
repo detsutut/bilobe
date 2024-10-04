@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function animateWords(index = 0) {
         if (index < wordContainers.length) {
             wordContainers[index].classList.add('active');
-            if (index == (wordContainers.length -2)) {
+            if (index >= (wordContainers.length -2)) {
                 setTimeout(() => animateWords(index + 1), 50);
             }
             else {
