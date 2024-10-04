@@ -52,7 +52,7 @@ height: 100vh;
 display: flex;
 align-items: center;
 justify-content: center;
-background-image: url('images/raminimal_inverted2.png');
+background-image: url('images/raminimal_inverted4.png');
 background-blend-mode: overlay;
 }
 #hero h1 {
