@@ -31,6 +31,14 @@ body, html {
             }
 }
 
+
+/* iOS Fallback: disable fixed background on iOS devices */
+@supports (-webkit-overflow-scrolling: touch) {
+    .section {
+        background-attachment: scroll; /* iOS doesn't handle fixed backgrounds well */
+    }
+}
+
 .container {
             max-width: 1200px;
             margin: 0 auto;
