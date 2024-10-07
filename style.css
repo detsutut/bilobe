@@ -68,9 +68,24 @@ body, html {
             }
             /* iOS Fallback: disable fixed background on iOS devices */
             @supports (-webkit-overflow-scrolling: touch) {
-                .section {
-                    background-attachment: scroll; /* iOS doesn't handle fixed backgrounds well */
-                }
+                        .section {
+                                    background-attachment: scroll; /* iOS doesn't handle fixed backgrounds well */
+                        }
+                        #hero {
+                                    background-image: url('images/raminimal_inverted4_ios.png');
+                        }            
+                        #about {
+                                    background-image: url('images/tech_inverted_ios.png');
+                        }
+                        #features {
+                                    background-image: url('images/minimal_invert_ios.png');
+                        }
+                        #partners {
+                                    background-image: url('images/minimal2_inverted_ios.png');
+                        }
+                        #contact {
+                                    background-image: url('images/tech_inverted_ios.png');
+                        }
             }
 }
 
