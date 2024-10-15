@@ -374,7 +374,6 @@ p {
 
 .partner-logo {
     width: 150px;
-    height: 100px;
     background-color: #fff;
     border-radius: 12px;
     align-items: center;
@@ -389,9 +388,14 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.partner-logo p {
+    font-size: small;
+}
+
 .partner-logo img {
-    width: 80%;
-    padding: 20px;
+    width: 90%;
+    height: 40%;
+    padding: 10px;
     object-fit: contain;
 }
 
