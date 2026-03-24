@@ -2,211 +2,398 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bilobe AI - Transforming healthcare with trustworthy AI solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="icon" href="images/logo.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="images/logo/logo.ico" type="image/x-icon">
-    <link rel="icon" href="images/logo/logo-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="images/logo/logo-touch-icon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilobe AI — Trustworthy AI for Healthcare</title>
+  <meta name="description"
+    content="Bilobe builds trustworthy, compliant, human-centered AI solutions for healthcare practitioners and organizations.">
+  <link rel="icon" href="images/logo/logo.ico" type="image/x-icon">
+  <link rel="icon" href="images/logo/logo-32x32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="images/logo/logo-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#partners">Partners</a></li>
-            <li><a href="#contact">People</a></li>
-        </ul>
-    </nav>
 
-    <section id="hero" class="section" data-speed="0.1">
-        <div class="container">
-            <h1 id="hero-title">
-                <span class="word-container"><img src="images/logo/logo.gif" alt="Bilobe Logo" class="logo-img"></span>
-                <!--<span class="word-container">Welcome<sup> </sup></span>
-                <span class="word-container">to<sup> </sup></span>-->
-                <span class="word-container">
-                    <bold>Bilobe</bold>
-                </span>
-                <span class="word-container"><sup style="color:#0db293; font-size:xx-large">AI</sup></span>
-            </h1>
-            <p id="hero-subtitle">Transforming healthcare with trustworthy AI solutions</p>
-            <a href="#features" class="btn" id="hero-btn">
-                <span class="material-symbols-outlined">rocket_launch</span> Explore Features
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand">
+        <img src="images/logo/logo.gif" alt="Bilobe" class="nav-logo-img">
+        <span>Bilobe<sup>AI</sup></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#partners">Partners</a></li>
+        <li><a href="#contact">People</a></li>
+      </ul>
+      <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
+      <div class="hero-dots"></div>
+    </div>
+    <div class="container">
+
+      <div class="hero-split">
+        <!-- Text -->
+        <div class="hero-text">
+          <div class="chip reveal">Healthcare AI · Pavia, Italy · Europe 🇪🇺</div>
+          <h1 class="hero-title">
+            <span class="reveal delay-1">Trustworthy.</span>
+            <span class="reveal delay-2 accent-text">for&nbsp;Healthcare.</span>
+          </h1>
+          <p class="hero-sub reveal delay-3">
+            We build compliant, explainable AI that empowers clinicians,
+            protects patients, and transforms healthcare delivery.
+          </p>
+          <div class="hero-actions reveal delay-4">
+            <a href="#features" class="btn-primary">
+              <span class="material-symbols-outlined">rocket_launch</span>
+              Explore Features
             </a>
+            <a href="#contact" class="btn-ghost">Meet the team <span aria-hidden="true">→</span></a>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <section id="features" class="section" data-speed="0.05">
-        <div class="container">
-            <h2 class="hidden">Our Features</h2>
-            <div class="features">
-                <div class="feature-card hidden">
-                    <span class="material-symbols-outlined feature-icon">error_med</span>
-                    <h3>Handling Unstructured Data</h3>
-                    <p>Is your health institution data mostly unstructured (text, images, biosignals, etc.) but filled
-                        with valuable insights to enhance decision-making and patient care? Bilobe got you covered,
-                        leveraging unstructured health data through modern AI methods</p>
-                </div>
-                <div class="feature-card hidden">
-                    <span class="material-symbols-outlined feature-icon">health_and_safety</span>
-                    <h3>Trustworthy, Compliant and Secure</h3>
-                    <p>Our AI solutions are designed with trustworthyness at their core. High-stakes applications of AI
-                        such as healthcare demand compliance with regulations (EU MDR, GDPR, AI act), protection of
-                        sensitive health data, as well as reliability and explainability of AI supported decisions</p>
-                </div>
-                <div class="feature-card hidden">
-                    <span class="material-symbols-outlined feature-icon">diagnosis</span>
-                    <h3>Human-centered clinical Evaluation and Interaction</h3>
-                    <p>Ensuring AI meets the requirements of healthcare professionals through top notch clinical
-                        evaluation practices, and virtuous interaction protocols. To achieve the best of both worlds in
-                        Human-AI synergy</p>
-                </div>
+      <div class="hero-stats reveal delay-5">
+        <div class="stat">
+          <span class="stat-num">40+</span>
+          <span class="stat-lbl">Years of research</span>
+        </div>
+        <div class="stat-div" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span class="stat-lbl">Expert founders</span>
+        </div>
+        <div class="stat-div" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">EU</span>
+          <span class="stat-lbl">MDR · GDPR · AI Act</span>
+        </div>
+        <div class="stat-div" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span class="stat-lbl">Research partners</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="label">Our Capabilities</p>
+        <h2>Built for the complexity<br>of clinical data.</h2>
+      </div>
+      <div class="features-grid">
+
+        <div class="feature-card reveal delay-1">
+          <div class="feature-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=85&auto=format&fit=crop"
+              alt="Medical data analytics" loading="lazy">
+          </div>
+          <div class="feature-overlay"></div>
+          <div class="feature-content">
+            <div class="feature-header">
+              <span class="material-symbols-outlined feature-icon">error_med</span>
+              <span class="feature-num">01</span>
             </div>
+            <h3>Handling Unstructured Data</h3>
+            <p>Is your health institution data mostly unstructured — text, images, biosignals — but filled with valuable
+              insights? Bilobe leverages modern AI to unlock what's hidden in clinical data.</p>
+          </div>
         </div>
-    </section>
 
-    <section id="about" class="section" data-speed="0.07">
-        <div class="container">
-            <h2 class="hidden">About Us</h2>
-            <p class="hidden">Born in Pavia, Italy, from the 40-year-long tradition of the Biomedical Informatics Lab
-                "Mario Stefanelli", Bilobe is the melting pot of cutting-edge academic research and real-world
-                implementation in healthcare. Our journey began with a vision: to harness the transformative potential
-                of artificial intelligence to tackle the complex challenges of human health and healthcare delivery.</p>
-            <p class="hidden">Our mission is to support healthcare practitioners, enhance patient outcomes, and improve
-                healthcare organizations with innovative technology. We excel in harnessing unstructured data to turn
-                complex information into actionable insights through transparent and trustworthy solutions.</p>
-            <p class="hidden">By combining advanced algorithms with our medical domain know-how, we aim to make
-                healthcare more efficient, accessible, and personalized. Join us on our journey to redefine healthcare
-                turning data into information and actionable insights.</p>
-        </div>
-    </section>
-
-    <section id="partners" class="section" data-speed="0.1">
-        <div class="container">
-            <h2 class="hidden">Our Partners</h2>
-            <div class="partners-grid hidden">
-
-                <div class="partner-logo">
-                    <img src="https://www.nvidia.com/content/nvidiaGDC/it/it_IT/about-nvidia/legal-info/logo-brand-usage/_jcr_content/root/responsivegrid/nv_container_392921705/nv_container/nv_image.coreimg.100.1290.png/1722330970194/nvidia-logo-vert.png"
-                        alt="Nvidia">
-                    <p>Teaming up with Nvidia BioNemo and the HiPerGator supercomputer for molecular medicine AI</p>
-                </div>
-
-                <div class="partner-logo">
-                    <img src="https://cralateneopv.unipv.it/wp-content/uploads/2019/01/MAIN_LOGO_scrittasotto_1000x1000-Nero-su-bianco-796x1024.png"
-                        alt="UniPV">
-                    <p>Partnering with UNIPV for research around biomedical NLP, XAI, and AI reliability</p>
-                </div>
-
-
-                <div class="partner-logo">
-                    <img src="https://retecardiologica.it/wp-content/uploads/2020/03/corporate_rgb-768x384.jpg"
-                        alt="Maugeri">
-                    <p>ICS Maugeri uses Bilobe solutions for clinical Information Extraction from clinical notes</p>
-                </div>
-
-                <div class="partner-logo">
-                    <img src="https://static.studyusa.com/school/aws_D5Mhl-qAiYO-oOys2hJbtkfVGIITMoSV_lg_1x.png?format=webp"
-                        alt="UFL">
-                    <p>Working with UF on a pan-viral LLM (ViraLingo) able to predict the next variants of concerns for
-                        HIV, Hepatitis and Coronavirus</p>
-                </div>
-
-
-                <div class="partner-logo">
-                    <img src="https://www.ehden.eu/wp-content/uploads/2019/12/Biomeris-logo.png" alt="Biomeris">
-                    <p>Enabling biomedical data platforms with AI on real-world data</p>
-                </div>
-
+        <div class="feature-card reveal delay-2">
+          <div class="feature-img-wrap">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=85&auto=format&fit=crop"
+              alt="Secure technology infrastructure" loading="lazy">
+          </div>
+          <div class="feature-overlay"></div>
+          <div class="feature-content">
+            <div class="feature-header">
+              <span class="material-symbols-outlined feature-icon">health_and_safety</span>
+              <span class="feature-num">02</span>
             </div>
+            <h3>Trustworthy, Compliant &amp; Secure</h3>
+            <p>Our AI solutions are built with trustworthiness at their core — compliant with EU MDR, GDPR, and the AI
+              Act, with data protection and explainability at every layer.</p>
+          </div>
         </div>
-    </section>
 
-    <section id="contact" class="section" data-speed="0.05">
-        <div class="container">
-            <h2 class="hidden">People</h2>
-            <div class="founders-grid">
-                <div class="founder-card">
-                    <img src="https://www.tedxpavia.com/wp-content/uploads/2024/03/Speaker-TEDxPavia-2024-2.png"
-                        alt="Enea Parimbelli" class="founder-img">
-                    <h3>Enea Parimbelli</h3>
-                    <p>CEO, Co-Founder | Ph.D.</p>
-                    <p class="founder-description"></p>
-                    <a href="https://www.linkedin.com/in/enea-parimbelli-22453120/" target="_blank"
-                        class="linkedin-link">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                            alt="LinkedIn" class="linkedin-icon"> LinkedIn
-                    </a>
-                </div>
-                <div class="founder-card">
-                    <img src="https://media.licdn.com/dms/image/D4D03AQE0IJbGXhJvnw/profile-displayphoto-shrink_200_200/0/1689175239424?e=2147483647&v=beta&t=DaOZI-4_OJn56Q9tqwOBwk8Fs4UDEL33NDlPHWBGdOo"
-                        alt="Lorenzo Nitoglia" class="founder-img">
-                    <h3>Lorenzo Nitoglia</h3>
-                    <p>CFO, Co-Founder | MEng</p>
-                    <p class="founder-description"></p>
-                    <a href="https://www.linkedin.com/in/lorenzo-nitoglia-685184108/" target="_blank"
-                        class="linkedin-link">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                            alt="LinkedIn" class="linkedin-icon"> LinkedIn
-                    </a>
-                </div>
-                <div class="founder-card">
-                    <img src="https://media.licdn.com/dms/image/C4E03AQFn6YhiszPOGg/profile-displayphoto-shrink_200_200/0/1606727697193?e=2147483647&v=beta&t=yj5FolrvEEPmo-GwIFLAuJBazYW94bp0drxwa8EBUTo"
-                        alt="Tommaso Buonocore" class="founder-img">
-                    <h3>Tommaso Buonocore</h3>
-                    <p>CTO, Co-Founder | Ph.D.</p>
-                    <p class="founder-description"></p>
-                    <a href="https://www.linkedin.com/in/tbuonocore/" target="_blank" class="linkedin-link">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                            alt="LinkedIn" class="linkedin-icon"> LinkedIn
-                    </a>
-                </div>
-                <div class="founder-card">
-                    <img src="https://www.ilgiorno.it/image-service/version/c:YWE4NjQ1YTktNmNkMC00:YmQwNjc1/riccardo-bellazzi-premiato-per-la-dedizione-allinformatica-medica.webp"
-                        alt="Riccardo Bellazzi" class="founder-img">
-                    <h3>Riccardo Bellazzi</h3>
-                    <p>Scientific Consultant & Co-Founder | Ph.D.</p>
-                    <p class="founder-description"></p>
-                    <a href="https://www.linkedin.com/in/riccardo-bellazzi-a765881/" target="_blank"
-                        class="linkedin-link">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                            alt="LinkedIn" class="linkedin-icon"> LinkedIn
-                    </a>
-                </div>
-                <div class="founder-card">
-                    <img src="https://i1.rgstatic.net/ii/profile.image/982699430912005-1611305210069_Q512/Giovanna-Nicora.jpg"
-                        alt="Giovanna Nicora" class="founder-img">
-                    <h3>Giovanna Nicora</h3>
-                    <p>Scientific Consultant & Co-Founder | Ph.D.</p>
-                    <p class="founder-description"></p>
-                    <a href="https://www.linkedin.com/in/giovanna-nicora-826110143/" target="_blank"
-                        class="linkedin-link">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                            alt="LinkedIn" class="linkedin-icon"> LinkedIn
-                    </a>
-                </div>
+        <div class="feature-card reveal delay-3">
+          <div class="feature-img-wrap">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=85&auto=format&fit=crop"
+              alt="Doctor using digital tools" loading="lazy">
+          </div>
+          <div class="feature-overlay"></div>
+          <div class="feature-content">
+            <div class="feature-header">
+              <span class="material-symbols-outlined feature-icon">diagnosis</span>
+              <span class="feature-num">03</span>
             </div>
+            <h3>Human-Centered Interaction</h3>
+            <p>Clinical evaluation practices and human-AI collaboration designed to keep practitioners in control —
+              achieving the best of both human expertise and AI synergy.</p>
+          </div>
         </div>
-    </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Bilobe SRL - All rights reserved</p>
-            <p>Bilobe SRL | Sede legale: Via Ferrata 5, Pavia, Italy | Cap.Soc. € 10.000 i.v.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-layout">
+
+        <div class="about-text">
+          <p class="label reveal">About Us</p>
+          <h2 class="about-statement reveal delay-1">Born from 40 years of biomedical informatics research.</h2>
+          <div class="about-tag reveal delay-2">
+            <span class="material-symbols-outlined">location_on</span>
+            Pavia, Italy
+          </div>
+          <div class="about-body">
+            <p class="reveal delay-3">Born in Pavia, Italy from the 40-year tradition of the Biomedical Informatics Lab
+              "Mario Stefanelli", Bilobe is the melting pot of cutting-edge academic research and real-world
+              implementation in healthcare.</p>
+            <p class="reveal delay-4">Our mission is to support healthcare practitioners, enhance patient outcomes, and
+              improve healthcare organizations with innovative technology — turning complex, unstructured data into
+              actionable insights through transparent and trustworthy solutions.</p>
+            <p class="reveal delay-5">By combining advanced algorithms with deep medical domain expertise, we make
+              healthcare more efficient, accessible, and personalized.</p>
+          </div>
         </div>
-    </footer>
 
-    <script src="script.js" defer>
-    </script>
+        <div class="about-visual reveal delay-2">
+          <img src="./images/tamburo.jpg" alt="Biomedical research laboratory">
+        </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section id="partners">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="label">Research Partners</p>
+        <h2>Trusted by leading<br>institutions worldwide.</h2>
+      </div>
+      <div class="partners-grid">
+        <div class="partner-card reveal delay-1">
+          <div class="partner-logo-wrap">
+            <img
+              src="https://www.nvidia.com/content/nvidiaGDC/it/it_IT/about-nvidia/legal-info/logo-brand-usage/_jcr_content/root/responsivegrid/nv_container_392921705/nv_container/nv_image.coreimg.100.1290.png/1722330970194/nvidia-logo-vert.png"
+              alt="Nvidia" loading="lazy">
+          </div>
+          <h4>Nvidia</h4>
+          <p>Teaming up with Nvidia BioNemo and the HiPerGator supercomputer for molecular medicine AI.</p>
+        </div>
+        <div class="partner-card reveal delay-2">
+          <div class="partner-logo-wrap">
+            <img
+              src="https://cralateneopv.unipv.it/wp-content/uploads/2019/01/MAIN_LOGO_scrittasotto_1000x1000-Nero-su-bianco-796x1024.png"
+              alt="University of Pavia" loading="lazy">
+          </div>
+          <h4>University of Pavia</h4>
+          <p>Partnering with UNIPV for research in biomedical NLP, XAI, and AI reliability.</p>
+        </div>
+        <div class="partner-card reveal delay-3">
+          <div class="partner-logo-wrap">
+            <img src="https://retecardiologica.it/wp-content/uploads/2020/03/corporate_rgb-768x384.jpg"
+              alt="ICS Maugeri" loading="lazy">
+          </div>
+          <h4>ICS Maugeri</h4>
+          <p>ICS Maugeri uses Bilobe solutions for clinical information extraction from clinical notes.</p>
+        </div>
+        <div class="partner-card reveal delay-4">
+          <div class="partner-logo-wrap">
+            <img src="https://static.studyusa.com/school/aws_D5Mhl-qAiYO-oOys2hJbtkfVGIITMoSV_lg_1x.png?format=webp"
+              alt="University of Florida" loading="lazy">
+          </div>
+          <h4>University of Florida</h4>
+          <p>Working with UF on ViraLingo, a pan-viral LLM predicting variants for HIV, Hepatitis, and Coronavirus.</p>
+        </div>
+        <div class="partner-card reveal delay-5">
+          <div class="partner-logo-wrap">
+            <img src="https://www.ehden.eu/wp-content/uploads/2019/12/Biomeris-logo.png" alt="Biomeris" loading="lazy">
+          </div>
+          <h4>Biomeris</h4>
+          <p>Enabling biomedical data platforms with AI on real-world data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PEOPLE -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="label">Our Team</p>
+        <h2>The people behind<br><img src="images/logo/logo.gif" alt="Bilobe" class="inline-icon"> Bilobe.</h2>
+      </div>
+      <div class="people-grid">
+
+        <div class="person-card reveal delay-1">
+          <div class="person-img-wrap">
+            <img src="https://www.tedxpavia.com/wp-content/uploads/2024/03/Speaker-TEDxPavia-2024-2.png"
+              alt="Enea Parimbelli" loading="lazy">
+          </div>
+          <div class="person-info">
+            <h3>Enea Parimbelli</h3>
+            <p class="person-role">CEO, Co-Founder · Ph.D.</p>
+            <a href="https://www.linkedin.com/in/enea-parimbelli-22453120/" target="_blank" rel="noopener"
+              class="linkedin-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13" aria-hidden="true">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="person-card reveal delay-2">
+          <div class="person-img-wrap">
+            <img src="./images/team/lorenzo-nitoglia.png" alt="Lorenzo Nitoglia" loading="lazy">
+          </div>
+          <div class="person-info">
+            <h3>Lorenzo Nitoglia</h3>
+            <p class="person-role">CFO, Co-Founder · MEng</p>
+            <a href="https://www.linkedin.com/in/lorenzo-nitoglia-685184108/" target="_blank" rel="noopener"
+              class="linkedin-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13" aria-hidden="true">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="person-card reveal delay-3">
+          <div class="person-img-wrap">
+            <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=Hw4JrokAAAAJ&citpid=1"
+              alt="Tommaso Buonocore" loading="lazy">
+          </div>
+          <div class="person-info">
+            <h3>Tommaso&nbsp;Buonocore</h3>
+            <p class="person-role">CTO, Co-Founder · Ph.D.</p>
+            <a href="https://www.linkedin.com/in/tbuonocore/" target="_blank" rel="noopener" class="linkedin-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13" aria-hidden="true">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="person-card reveal delay-4">
+          <div class="person-img-wrap">
+            <img
+              src="https://www.ilgiorno.it/image-service/version/c:YWE4NjQ1YTktNmNkMC00:YmQwNjc1/riccardo-bellazzi-premiato-per-la-dedizione-allinformatica-medica.webp"
+              alt="Riccardo Bellazzi" loading="lazy">
+          </div>
+          <div class="person-info">
+            <h3>Riccardo Bellazzi</h3>
+            <p class="person-role">Scientific Consultant &amp; Co-Founder · Ph.D.</p>
+            <a href="https://www.linkedin.com/in/riccardo-bellazzi-a765881/" target="_blank" rel="noopener"
+              class="linkedin-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13" aria-hidden="true">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.77z" />
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="person-card reveal delay-5">
+          <div class="person-img-wrap">
+            <img src="./images/team/lucia-sacchi.png" alt="Lucia Sacchi" loading="lazy">
+          </div>
+          <div class="person-info">
+            <h3>Lucia Sacchi</h3>
+            <p class="person-role">Scientific Consultant &amp; Co-Founder · Ph.D.</p>
+            <a href="https://www.linkedin.com/in/lucia-sacchi/" target="_blank" rel="noopener" class="linkedin-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13" aria-hidden="true">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="person-card reveal delay-6">
+          <div class="person-img-wrap">
+            <img src="https://i1.rgstatic.net/ii/profile.image/982699430912005-1611305210069_Q512/Giovanna-Nicora.jpg"
+              alt="Giovanna Nicora" loading="lazy">
+          </div>
+          <div class="person-info">
+            <h3>Giovanna Nicora</h3>
+            <p class="person-role">Scientific Consultant &amp; Co-Founder · Ph.D.</p>
+            <a href="https://www.linkedin.com/in/giovanna-nicora-826110143/" target="_blank" rel="noopener"
+              class="linkedin-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13" aria-hidden="true">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="person-card reveal delay-7">
+          <div class="person-img-wrap">
+            <img src="./images/team/arianna-dagliati.png" alt="Arianna Dagliati" loading="lazy">
+          </div>
+          <div class="person-info">
+            <h3>Arianna Dagliati</h3>
+            <p class="person-role">Scientific Consultant &amp; Co-Founder · Ph.D.</p>
+            <a href="https://www.linkedin.com/in/arianna-dagliati/" target="_blank" rel="noopener"
+              class="linkedin-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13" aria-hidden="true">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <a href="#hero" class="footer-brand">Bilobe<sup>AI</sup></a>
+      <p>© 2024 Bilobe SRL · Via Ferrata 5, Pavia, Italy · Cap.Soc. € 10.000 i.v.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
