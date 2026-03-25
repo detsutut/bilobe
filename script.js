@@ -155,6 +155,48 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ── Cookie consent ──────────────────────────────────────
+  const banner       = document.getElementById('cookie-banner');
+  const modal        = document.getElementById('cookie-modal');
+  const backdrop     = document.getElementById('cookie-modal-backdrop');
+
+  function hideBanner() { banner.hidden = true; }
+  function showBanner() { banner.hidden = false; }
+  function hideModal()  { modal.hidden  = true; }
+  function showModal()  { modal.hidden  = false; }
+
+  // Show banner only if consent not yet recorded
+  if (!localStorage.getItem('cookie-consent')) showBanner();
+
+  document.getElementById('cookie-accept').addEventListener('click', () => {
+    localStorage.setItem('cookie-consent', 'accepted');
+    hideBanner();
+  });
+
+  document.getElementById('cookie-decline').addEventListener('click', () => {
+    localStorage.setItem('cookie-consent', 'declined');
+    hideBanner();
+  });
+
+  document.getElementById('open-cookie-policy').addEventListener('click', showModal);
+  document.getElementById('close-cookie-modal').addEventListener('click', hideModal);
+  backdrop.addEventListener('click', hideModal);
+
+  document.getElementById('modal-cookie-accept').addEventListener('click', () => {
+    localStorage.setItem('cookie-consent', 'accepted');
+    hideModal(); hideBanner();
+  });
+
+  document.getElementById('modal-cookie-decline').addEventListener('click', () => {
+    localStorage.setItem('cookie-consent', 'declined');
+    hideModal(); hideBanner();
+  });
+
+  // Close modal on Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !modal.hidden) hideModal();
+  });
+
   // ── Copy email button ────────────────────────────────────
   const copyBtn = document.getElementById('copy-email-btn');
   if (copyBtn) {
