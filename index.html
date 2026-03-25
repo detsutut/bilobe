@@ -32,6 +32,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#partners">Partners</a></li>
         <li><a href="#contact">People</a></li>
+        <li><a href="#get-in-touch">Contact</a></li>
       </ul>
       <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -42,9 +43,9 @@
   <!-- HERO -->
   <section id="hero">
     <div class="hero-bg">
+      <canvas id="hero-canvas"></canvas>
       <div class="hero-glow-1"></div>
       <div class="hero-glow-2"></div>
-      <div class="hero-dots"></div>
     </div>
     <div class="container">
 
@@ -378,6 +379,54 @@
               </svg>
               LinkedIn
             </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT US -->
+  <section id="get-in-touch">
+    <div class="container">
+      <div class="contact-layout">
+
+        <div class="contact-left reveal">
+          <p class="label">Contact Us</p>
+          <h2 class="contact-title">Let's get<br><span class="accent-text">in touch.</span></h2>
+          <p class="contact-intro">Whether you're looking to integrate AI into your clinical workflow, explore a research collaboration, or simply learn more about what we do — we'd love to hear from you.</p>
+          <ul class="contact-services">
+            <li>AI solutions for healthcare organizations</li>
+            <li>Regulatory-compliant deployments (EU MDR, GDPR, AI Act)</li>
+            <li>Research collaborations and partnerships</li>
+            <li>Custom NLP and XAI for clinical data</li>
+          </ul>
+          <div class="contact-trust">
+            <div class="trust-item">
+              <span class="material-symbols-outlined">schedule</span>
+              Response within 2 business days
+            </div>
+            <div class="trust-item">
+              <span class="material-symbols-outlined">lock</span>
+              Confidential by default
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-right reveal delay-2">
+          <div class="contact-card">
+            <p class="contact-card-label">Direct line</p>
+            <a href="mailto:info@bilobe.ai" class="contact-email">info@bilobe.ai</a>
+            <div class="contact-actions">
+              <a href="mailto:info@bilobe.ai" class="btn-primary">
+                <span class="material-symbols-outlined">mail</span>
+                Compose email
+              </a>
+              <button class="btn-copy" id="copy-email-btn">
+                <span class="material-symbols-outlined">content_copy</span>
+                Copy email
+              </button>
+            </div>
           </div>
         </div>
 
